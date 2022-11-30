@@ -5,8 +5,9 @@ namespace Final.Models
 {
     public class Pokemon
     {
-        public int PokemonSeries {get; set;} // Primary Key
+        public int PokemonID {get; set;} // Primary Key
         public string Individual {get; set;} = string.Empty;
         public string PokemonName {get; set;} = string.Empty;
+        public string PokemonSeries {get; set;} = string.Empty;
     }
 }

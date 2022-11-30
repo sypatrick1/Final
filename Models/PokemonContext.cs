@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 
 // Step 3: Create the Data Model
-namespace Pokemon.Models
+namespace Final.Models
 {
 	public class PokemonContext : DbContext
 	{
