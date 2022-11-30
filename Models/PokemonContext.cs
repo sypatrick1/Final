@@ -9,6 +9,6 @@ namespace Final.Models
 			: base(options)
 		{
 		}
-		public DbSet<Pokemon> Professor {get; set;} = default!;
+		public DbSet<Pokemon> Pokemon {get; set;} = default!;
 	}
 }
