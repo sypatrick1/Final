@@ -7,7 +7,10 @@ namespace Final.Models
 	{
 		public PokemonContext (DbContextOptions<PokemonContext> options)
 			: base(options)
-		{
+		{ protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<CharacterSeries>().HasKey(s => new {s.PokemonID, s.CharacterID});
+        }
 		}
 		public DbSet<Pokemon> Pokemon {get; set;} = default!;
 	}
