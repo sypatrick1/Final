@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Pokemon.Models
+namespace Final.Models
 {
     public static class SeedData
     {
@@ -8,7 +8,7 @@ namespace Pokemon.Models
         {
             using (var context = new PokemonContext(
                 serviceProvider.GetRequiredService<
-                    DbContextOptions<PokemonrContext>>()))
+                    DbContextOptions<PokemonContext>>()))
             {
                 if (context == null || context.Pokemon == null)
                 {
@@ -22,13 +22,13 @@ namespace Pokemon.Models
                 }
 
                 context.Pokemon.AddRange(
-                    new PokemonSeries {
+                    new Pokemon {
                        PokemonSeries = "Diamond and Pearl"
                     },
-                    new PokemonSeries {
+                    new Pokemon {
                         PokemonSeries = "Black and White"
                     },
-                    new PokemonSeries { PokemonSeries = "Sun and Moon" }
+                    new Pokemon { PokemonSeries = "Sun and Moon" }
                 );
 
                 context.SaveChanges();
