@@ -11,7 +11,7 @@
             <div class="form-group">
                <label asp-for="Pokemon Series"></label>
                 <select asp-for="Pokemon Series" asp-items="Model.PokemonDropDown" class="form-control">
-                    <option value="">-- Select Pokemon Series --</option>
+                    <option value="">-- Select PokemonSeries --</option>
                 </select>
             </div>
             <div class="form-group">
